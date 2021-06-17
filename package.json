@@ -1,0 +1,24 @@
+{
+  "name": "jyd-koa-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./bin/index.js",
+  "type": "module",
+  "files": ["bin","package.json"],
+  "scripts": {
+    "test": "node index.js",
+    "test-g": "jyd-koa-cli"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "ejs": "^3.1.6",
+    "execa": "^5.1.1",
+    "inquirer": "^8.1.1",
+    "prettier": "^2.3.1",
+    "rimraf": "^3.0.2"
+  }
+}
