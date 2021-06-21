@@ -3,12 +3,13 @@ import fs from 'fs'
 import createIndexTemplate from './createIndexTemplate.js'
 import createPackageTemplate from './createPackageTemplate.js'
 import createConfig from './createConfig.js'
+import { Command } from 'commander';
 import rimraf from 'rimraf'
 import chalk from 'chalk'
 import execa from 'execa'
 
+const program = new Command();
 const config = createConfig()
-
 //如果存在文件先删除
 rimraf.sync(`./${config.packageName}`)
 console.log(chalk.blue("项目生成中...."))

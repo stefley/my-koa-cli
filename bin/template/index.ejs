@@ -1,11 +1,18 @@
+import path from 'path'
+import { fileURLToPath } from 'url'
 import Koa from 'koa'
+import bodyparser from 'koa-bodyparser'
 <% if (middleWare.router) { %>
 import koaRouter from 'koa-router'
 <% } %>
 <% if (middleWare.static) { %>
 import koaStatic from 'koa-static'
 <% } %>
+const __dirname = fileURLToPath(import.meta.url)
 const app = new Koa()
+app.use(bodyparser({
+    enableTypes:['json', 'form', 'text']
+}))
 <% if (middleWare.router) { %>
     const router = new koaRouter()
 <% } %>
